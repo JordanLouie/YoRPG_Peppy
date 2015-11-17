@@ -20,9 +20,20 @@ public class Mage extends Character{
         name = Name;
     }
 
-    //normal attack, reset defense and attack values
+    //normal attack, reset defense and strength values
     public void normalize(){
         defense = 40;
-        attackRate = 0.6;
+        strength = 125;
+    }
+
+    //special attack, decrease defense and increase strength
+    public void specialize(){
+        defense -= 10;
+        strength += 30;
+    }
+
+    //info about each class
+    public String about(){
+	return "Mages have the most strength but least health.";
     }
 }

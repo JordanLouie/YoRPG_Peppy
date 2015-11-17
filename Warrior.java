@@ -19,4 +19,23 @@ public class Warrior extends Character{
 	this();
         name = Name;
     }
+
+    //special attack, decrease defense and increase attack and strength
+    public void specialize(){
+        defense -= 10;
+        attackRate += 0.2;
+	strength += 10;
+    }
+    
+    //normal attack, reset defense and attack values
+    public void normalize(){
+        defense = 40;
+        attackRate = 0.4;
+	strength = 100;
+    }
+
+    //info about each class
+    public String about(){
+	return "Warriors have the second most strength after Mages.";
+    }
 }

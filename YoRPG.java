@@ -24,7 +24,6 @@ public class YoRPG {
     //each round, a Warrior and a Monster will be instantiated
     private Character pat;
     private Monster smaug; //Friendly generic monster name, eh?
-    private String subClass;
 
     private int moveCount;
     private boolean gameOver;
@@ -92,29 +91,24 @@ public class YoRPG {
 	try {
 	    int i = Integer.parseInt( in.readLine() );
 	    if (i == 1){
-		subClass = "Warrior";
 		pat = new Warrior(name);
 	    }
 	    if (i == 2){
-		subClass = "Mage";
 		pat = new Mage(name);
 	    }
 	    if (i == 3){
-		subClass = "Rogue";
 		pat = new Rogue(name);
 	    }
 	    if (i == 4){
-		subClass = "Healer";
 		pat = new Healer(name);
 	    }
 	    if (i == 5){
-		subClass = "Tank";
 		pat = new Tank(name);
 	    }
 	}
 	catch ( IOException e ) { }
 
-	System.out.println(pat.about(subClass));
+	System.out.println(pat.about());
 
     }//end newGame()
 

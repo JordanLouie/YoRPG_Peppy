@@ -25,4 +25,15 @@ public class Rogue extends Character{
         defense = 40;
         attackRate = 0.8;
     }
+
+    //special attack, decrease defense and increase attack
+    public void specialize(){
+        defense -= 10;
+        attackRate += 0.5;
+    }
+
+    //info about each class
+    public String about(){
+	return "Rogues have the highest attack rate.";
+    }
 }

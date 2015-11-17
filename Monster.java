@@ -13,4 +13,21 @@ public class Monster extends Character{
         defense = 20;
         attackRate = 1;
     }
+
+    //special attack, increase attack but decrease defense
+    public void specialize(){
+	attackRate += .5;
+	defense -= 10;
+    }
+    
+    //normal attack, reset defense and attack values
+    public void normalize(){
+        defense = 20;
+        attackRate = 1;
+    }
+
+    //info about each class
+    public String about(){
+	return "A normal monster.";
+    }
 }

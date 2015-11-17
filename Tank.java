@@ -20,9 +20,20 @@ public class Tank extends Character{
         name = Name;
     }
 
-    //normal attack, reset defense and attack values
+    //normal attack, reset defense and strength values
     public void normalize(){
         defense = 80;
-        attackRate = 0.4;
+        strength = 75;
+    }
+
+    //special attack, increase defense and decrease strength
+    public void specialize(){
+        defense += 30;
+        strength -= 10;
+    }
+
+    //info about each class
+    public String about(){
+	return "Tanks have the most defense.";
     }
 }

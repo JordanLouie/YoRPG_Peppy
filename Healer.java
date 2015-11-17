@@ -19,4 +19,24 @@ public class Healer extends Character{
 	this();
         name = Name;
     }
+
+    //special attack, decrease strength and heals for some HP
+    public void specialize(){
+        strength -= 20;
+	int heal = 30;
+	if (HP + heal <= 175) HP += heal;
+	else
+	    HP = 175;
+    }
+    
+    //normal attack, reset defense and attack values
+    public void normalize(){
+        defense = 40;
+        attackRate = 0.4;
+    }
+
+    //info about each class
+    public String about(){
+	return "Healers have the most HP and can heal themselves.";
+    }
 }
